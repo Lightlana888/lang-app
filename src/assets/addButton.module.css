@@ -1,0 +1,28 @@
+@import './theme.module.css';
+
+
+.addButton {
+    /* Обычные стили кнопки */
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 30rem;
+    height: 5rem;
+    margin-top: 3rem;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+}
+
+.addButton:hover {
+    background-color: var(--secondary-color);
+
+}
+
+
+.addButton:active {
+    transform: scale(0.95);
+
+}

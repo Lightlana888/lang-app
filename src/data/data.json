@@ -1,0 +1,76 @@
+{
+    "words": [
+        {
+            "id": "15467",
+            "english": "example",
+            "transcription": "[iɡˈzampəl]",
+            "russian": "пример",
+            "tags": "general",
+            "tags_json": "[\"general\"]"
+        },
+        {
+            "id": "15475",
+            "english": "apple",
+            "transcription": "[æpl]",
+            "russian": "яблоко",
+            "tags": "fruit",
+            "tags_json": "[\"fruit\"]"
+        },
+        {
+            "id": "15486",
+            "english": "two",
+            "transcription": "[tu:]",
+            "russian": "два",
+            "tags": "numbers",
+            "tags_json": "[\"numbers\"]"
+        },
+        {
+            "id": "15524",
+            "english": "one",
+            "transcription": "[wən]",
+            "russian": "один",
+            "tags": "numbers",
+            "tags_json": "[\"numbers\"]"
+        },
+        {
+            "id": "15525",
+            "english": "river",
+            "transcription": "[ˈrivər]",
+            "russian": "река",
+            "tags": "nature",
+            "tags_json": "[\"nature\"]"
+        },
+        {
+            "id": "15527",
+            "english": "cup",
+            "transcription": "[kʌp]",
+            "russian": "чашка",
+            "tags": "general",
+            "tags_json": "[\"general\"]"
+        },
+        {
+            "id": "15536",
+            "english": "lesson",
+            "transcription": "[ˈlesən]",
+            "russian": "урок",
+            "tags": "study",
+            "tags_json": "[\"study\"]"
+        },
+        {
+            "id": "15537",
+            "english": "education",
+            "transcription": "[ˌejəˈkāSH(ə)n]",
+            "russian": "образование",
+            "tags": "study",
+            "tags_json": "[\"study\"]"
+        },
+        {
+            "id": "15538",
+            "english": "life",
+            "transcription": "[līf]",
+            "russian": "жизнь",
+            "tags": "general",
+            "tags_json": "[\"general\"]"
+        }
+    ]
+}

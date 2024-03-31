@@ -1,0 +1,12 @@
+.header {
+    box-sizing: border-box;
+    margin: 0;
+    height: 10vh;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-style: italic;
+}
