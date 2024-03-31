@@ -16,7 +16,7 @@ function RegistrationForm() {
     const [formData, setFormData] = useState({
         username: '',
         password: '',
-        confirmPassword: '' // Добавляем поле для подтверждения пароля
+        confirmPassword: ''
     });
 
     const handleChange = (event) => {
@@ -31,16 +31,16 @@ function RegistrationForm() {
         event.preventDefault();
         if (formData.password !== formData.confirmPassword) {
             console.log('Пароли не совпадают');
-            return; // Прерываем выполнение функции в случае несовпадения паролей
+            return;
         }
-        // Сохраняем данные в Local Storage
+
         localStorage.setItem('userData', JSON.stringify(formData));
         console.log('Регистрация успешна:', formData);
-        // Очищаем поля формы после успешной регистрации
+
         setFormData({
             username: '',
             password: '',
-            confirmPassword: '' // Очищаем также поле для подтверждения пароля
+            confirmPassword: ''
         });
     };
 
@@ -69,7 +69,7 @@ function RegistrationForm() {
                 required
             /><br /><br />
 
-            <label htmlFor="confirmPassword">Подтвердите пароль:</label> {/* Добавляем поле для подтверждения пароля */}
+            <label htmlFor="confirmPassword">Подтвердите пароль:</label>
             <input
                 type="password"
                 id="confirmPassword"
