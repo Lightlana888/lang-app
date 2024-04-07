@@ -1,23 +1,28 @@
 import React, { useState } from 'react';
-
-import RegistrationForm from './input';
-import WordList from './WordList';
+//import AuthApp from './input';
+//import RegistrationForm from './input';
+import WordTable from './WordTable';
+import WordCard from './WordCard';
 
 function HomePage() {
 
-    const [isRegistered, setIsRegistered] = useState(true);
+    //const [isRegistered, setIsRegistered] = useState(true);
 
-    const handleRegistration = () => {
+    /*const handleRegistration = () => {
         setIsRegistered(true);
 
-    };
+    };*/
 
     return (
-        <div>
-
-            {isRegistered ? <WordList /> : <RegistrationForm onRegistration={handleRegistration} />}
-        </div>
-    );
+        /*<div>
+    
+    {isRegistered ? <WordTable /> : <AuthApp onRegistration={handleRegistration} />}
+            </div>
+        );
+    }*/
+        <>
+            <div><WordTable /></div>
+            <div><WordCard /></div>
+        </>);
 }
-
 export default HomePage;
