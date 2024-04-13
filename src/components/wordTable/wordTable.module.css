@@ -1,19 +1,26 @@
 .wordTable {
     display: table;
-    width: 80%;
+    width: 80vw;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
     border: 4px solid var(--accent-color);
     border-radius: 10px;
+    background-color: var(--main-color);
 }
 
+.wordTableTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+
+}
 
 .wordTable h1 {
     text-align: center;
-
+    margin-left: 25rem;
 
 }
 

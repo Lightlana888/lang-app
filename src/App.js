@@ -1,7 +1,8 @@
 import './App.css';
-import Header from './components/Header';
-import HomePage from './components/HomePage';
-import WordCard from './components/WordCard';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import HomePage from './components/homePage/HomePage';
+
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header />
       <HomePage />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,45 @@
+.wordList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttonPrev,
+.buttonNext {
+    width: 50px;
+    height: 50px;
+}
+
+.buttonPrev:hover,
+.buttonNext:hover {
+    background-color: var(--accent-color);
+}
+
+.buttonPrev:active,
+.buttonNext:active {
+
+    transform: scale(0.95);
+}
+
+.buttonPrev {
+    margin-right: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.buttonNext {
+    margin-left: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}

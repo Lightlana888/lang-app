@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import wordsData from '../data/data.json';
-import EditButton from './buttons/editButton';
-import SaveButton from './buttons/saveButton';
-import CancelButton from './buttons/cancelButton';
-import DeleteButton from './buttons/deleteButton';
-import AddButton from './buttons/addButton';
-import styles from '../assets/wordTable.module.css';
-import handleEdit from './handlers/handleEdit';
-import handleSave from './handlers/handleSave';
-import handleCancel from './handlers/handleCancel';
-import handleDelete from './handlers/handleDelete';
-import handleAdd from './handlers/handleAdd';
-import handleChange from './handlers/handleChange';
-import handleSaveNewWord from './handlers/handleSaveNewWord';
+import wordsData from '../../data/data.json';
+import Button from '../buttons/Button';
+import styles from './wordTable.module.css';
+import buttonStyles from '../buttons/Button.module.css';
+import { handleAdd, handleCancel, handleChange, handleDelete, handleEdit, handleSave, handleSaveNewWord } from '../handlers';
+
+
 
 function WordTable({ defaultValues }) {
     const [editableWord, setEditableWord] = useState(null);
@@ -61,8 +54,9 @@ function WordTable({ defaultValues }) {
     }
 
     return (
-        <div className={styles.wordTable}>
-            <h1>Список слов</h1>
+
+        <div className={styles.wordTable}><div className={styles.wordTableTitle}>
+            <h1>Список слов</h1> <Button className={buttonStyles.addButton} onClick={handleAddClick} buttonText="Добавить слово" /></div>
             <table>
                 <thead>
                     <tr>
@@ -82,8 +76,8 @@ function WordTable({ defaultValues }) {
                                     <td><input value={newWord.transcription} onChange={(e) => handleChangeClick(e, 'transcription')} /></td>
                                     <td><input value={newWord.russian} onChange={(e) => handleChangeClick(e, 'russian')} /></td>
                                     <td><input value={newWord.tags} onChange={(e) => handleChangeClick(e, 'tags')} /></td>
-                                    <td><SaveButton onClick={() => handleSaveClick(index)} /></td>
-                                    <td><CancelButton onClick={handleCancelClick} /></td>
+                                    <td><Button className={buttonStyles.saveButton} onClick={() => handleSaveClick(index)} buttonText="Сохранить" /></td>
+                                    <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="Отмена" /></td>
                                 </>
                             ) : (
                                 <>
@@ -91,8 +85,8 @@ function WordTable({ defaultValues }) {
                                     <td>{word.transcription}</td>
                                     <td>{word.russian}</td>
                                     <td>{word.tags}</td>
-                                    <td><EditButton onClick={() => handleEditClick(index)} /></td>
-                                    <td><DeleteButton onClick={() => handleDeleteClick(word.id)} /></td>
+                                    <td><Button className={buttonStyles.editButton} onClick={() => handleEditClick(index)} buttonText="Редактировать" /></td>
+                                    <td><Button className={buttonStyles.deleteButton} onClick={() => handleDeleteClick(word.id)} buttonText="Удалить" /></td>
                                 </>
                             )}
                         </tr>
@@ -103,13 +97,14 @@ function WordTable({ defaultValues }) {
                             <td><input value={newWord.transcription} onChange={(e) => handleChangeClick(e, 'transcription')} /></td>
                             <td><input value={newWord.russian} onChange={(e) => handleChangeClick(e, 'russian')} /></td>
                             <td><input value={newWord.tags} onChange={(e) => handleChangeClick(e, 'tags')} /></td>
-                            <td><SaveButton onClick={handleSaveNewWordClick} /></td>
-                            <td><CancelButton onClick={handleCancelClick} /></td>
+                            <td><Button className={buttonStyles.saveButton} onClick={handleSaveNewWordClick} buttonText="Сохранить" /></td>
+                            <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="Отмена" /></td>
+                            <td></td>
                         </tr>
                     )}
                 </tbody>
             </table>
-            <AddButton onAdd={handleAddClick} />
+
         </div>
     );
 }
