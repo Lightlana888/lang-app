@@ -4,7 +4,7 @@ import styles from './wordList.module.css';
 import data from '../../data/data.json';
 import Button from '../buttons/Button';
 import buttonStyles from '../buttons/Button.module.css';
-import { motion } from 'framer-motion';
+
 
 function WordList({ initialIndex }) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);

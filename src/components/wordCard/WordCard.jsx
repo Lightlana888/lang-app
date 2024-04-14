@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'; // Импортируем motion из framer-motion
+import { motion } from 'framer-motion';
 import styles from './wordCard.module.css';
 import Button from '../buttons/Button';
 import buttonStyles from '../buttons/Button.module.css';
@@ -28,7 +28,7 @@ function WordCard({ word }) {
                         </div>
                         {showTranslation
                             ? (<div className={styles.translation}>{word.russian.charAt(0).toUpperCase() + word.russian.slice(1)}</div>)
-                            : (<Button className={buttonStyles.checkButton} onClick={handleShowTranslation} buttonText="Добавить слово"></Button>)}
+                            : (<Button className={buttonStyles.checkButton} onClick={handleShowTranslation} buttonText="Проверить"></Button>)}
                     </motion.div>
                 </>
             )}
