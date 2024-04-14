@@ -34,6 +34,7 @@ function WordTable({ defaultValues }) {
 
     const handleCancelClick = () => {
         handleCancel(setEditableWord, setNewWord);
+        setShowNewWordRow(false);
     }
 
     const handleDeleteClick = (wordId) => {
@@ -55,8 +56,11 @@ function WordTable({ defaultValues }) {
 
     return (
 
-        <div className={styles.wordTable}><div className={styles.wordTableTitle}>
-            <h1>Список слов</h1> <Button className={buttonStyles.addButton} onClick={handleAddClick} buttonText="Добавить слово" /></div>
+        <div className={styles.wordTable}>
+            <div className={styles.wordTableTitle}>
+                <h1>Список слов</h1>
+                <Button className={buttonStyles.addButton} onClick={handleAddClick} buttonText="Добавить слово" />
+            </div>
             <table>
                 <thead>
                     <tr>

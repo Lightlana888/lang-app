@@ -2,8 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .wordCard {
@@ -49,21 +47,7 @@
     margin-bottom: 5rem;
 }
 
-.checkButton {
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 90%;
-    height: 5rem;
-    margin: 10px 10px;
-    align-self: center;
-    transition: background-color 0.3s ease;
-    font-size: 30px;
 
-}
 
 .checkButton:hover {
     background-color: var(--secondary-color);

@@ -1,160 +1,99 @@
 @import '../../assets/theme.module.css';
 
 
+/* Стили кнопок */
+.addButton,
+.editButton,
+.deleteButton,
+.saveButton,
+.cancelButton,
+.checkButton {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
 .addButton {
-    /* Обычные стили кнопки */
     background-color: var(--accent-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 20rem;
+    width: 23rem;
     height: 3rem;
-
-    transition: background-color 0.3s ease;
-    font-size: 24px;
+    font-size: 22px;
+    margin-right: 2rem;
 }
 
-.addButton:hover {
-    background-color: var(--secondary-color);
-
-}
-
-
-.addButton:active {
-    transform: scale(0.95);
-
-}
-
-.editButton {
-    /* Обычные стили кнопки */
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация наведения */
-    transition: background-color 0.3s ease;
-}
-
-.editButton:hover {
-    background-color: var(--accent-color);
-    /* Новый цвет при наведении */
-}
-
-.editButton {
-    /* Обычные стили кнопки */
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация нажатия */
-    transition: transform 0.3s ease;
-}
-
-.editButton:active {
-    transform: scale(0.95);
-    /* Масштабирование кнопки при нажатии */
-}
-
+.editButton,
+.saveButton,
 .deleteButton {
-    /* Обычные стили кнопки */
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация наведения */
-    transition: background-color 0.3s ease;
-}
-
-.deleteButton:hover {
-    background-color: var(--accent-color);
-    /* Новый цвет при наведении */
-}
-
-.deleteButton {
-    /* Обычные стили кнопки */
     background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация нажатия */
-    transition: transform 0.3s ease;
 }
 
-.deleteButton:active {
-    transform: scale(0.95);
-    /* Масштабирование кнопки при нажатии */
-}
-
-.saveButton {
-    /* Обычные стили кнопки */
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация наведения */
-    transition: background-color 0.3s ease;
-}
-
-.saveButton:hover {
-    background-color: var(--accent-color);
-    /* Новый цвет при наведении */
-}
-
-.saveButton {
-    /* Обычные стили кнопки */
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-
-    /* Анимация нажатия */
-    transition: transform 0.3s ease;
-}
-
-.saveButton:active {
-    transform: scale(0.95);
-    /* Масштабирование кнопки при нажатии */
-}
-
+.deleteButton,
 .cancelButton {
-
     background-color: var(--secondary-color);
+}
+
+.checkButton {
+    background-color: var(--accent-color);
+    width: 90%;
+    height: 5rem;
+    margin: 10px 10px;
+    align-self: center;
+    font-size: 30px;
+}
+
+.buttonPrev,
+.buttonNext {
+    width: 50px;
+    height: 50px;
+}
+
+.buttonPrev:hover,
+.buttonNext:hover,
+.checkButton:hover {
+    background-color: var(--accent-color);
+}
+
+.buttonPrev:active,
+.buttonNext:active,
+.checkButton:active {
+    transform: scale(0.95);
+}
+
+.buttonPrev {
+    margin-right: 5rem;
+    margin-left: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.buttonNext {
+    margin-left: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.buttonPlay,
+.buttonList {
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
-
+    width: 30rem;
+    height: 5rem;
+    margin: 10rem;
     transition: background-color 0.3s ease;
-}
-
-.cancelButton:hover {
-    background-color: var(--accent-color);
-
-}
-
-
-.cancelButton:active {
-    transform: scale(0.95);
-
+    font-size: 28px;
 }

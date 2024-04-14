@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import WordTable from '../wordTable/WordTable';
 import Button from '../buttons/Button';
 import WordList from '../wordList/WordList';
-import styles from './homePage.module.css'
+import styles from './homePage.module.css';
+import buttonStyles from '../buttons/Button.module.css';
 
 function HomePage() {
     const [showWordTable, setShowWordTable] = useState(false);
@@ -41,8 +42,8 @@ function HomePage() {
             {showWordTable && <WordTable />}
             {!showWordList && !showWordTable && (
                 <>
-                    <Button className={styles.buttonPlay} onClick={handlePlayButtonClick} buttonText="Играть"></Button>
-                    <Button className={styles.buttonList} onClick={handleWordListButtonClick} buttonText="Список слов"></Button>
+                    <Button className={buttonStyles.buttonPlay} onClick={handlePlayButtonClick} buttonText="Играть"></Button>
+                    <Button className={buttonStyles.buttonList} onClick={handleWordListButtonClick} buttonText="Список слов"></Button>
                 </>
             )}
         </div>

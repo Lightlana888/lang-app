@@ -5,41 +5,24 @@
 
 }
 
-.buttonPrev,
-.buttonNext {
-    width: 50px;
-    height: 50px;
+.card-transition-enter {
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
-.buttonPrev:hover,
-.buttonNext:hover {
-    background-color: var(--accent-color);
+.card-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
 }
 
-.buttonPrev:active,
-.buttonNext:active {
-
-    transform: scale(0.95);
+.card-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
 }
 
-.buttonPrev {
-    margin-right: 5rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.buttonNext {
-    margin-left: 5rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+т .card-transition-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 500ms, transform 500ms;
 }

@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion'; // Импортируем motion из framer-motion
 import styles from './wordCard.module.css';
+import Button from '../buttons/Button';
+import buttonStyles from '../buttons/Button.module.css';
 
 function WordCard({ word }) {
     const [showTranslation, setShowTranslation] = useState(false);
@@ -10,20 +13,27 @@ function WordCard({ word }) {
 
     return (
         <div className={styles.pageCenter}>
-            <div className={styles.wordCard}>
-                {word && (
-                    <>
+
+            {word && (
+                <>
+                    <motion.div
+                        className={styles.wordCard}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <div className={styles.wordBlock}>
                             <div className={styles.word}>{word.english.charAt(0).toUpperCase() + word.english.slice(1)}</div>
                             <div className={styles.transcription}>{word.transcription}</div>
                         </div>
                         {showTranslation
                             ? (<div className={styles.translation}>{word.russian.charAt(0).toUpperCase() + word.russian.slice(1)}</div>)
-                            : (<button className={styles.checkButton} onClick={handleShowTranslation}>Проверить</button>)}
-                    </>
-                )}
-            </div>
+                            : (<Button className={buttonStyles.checkButton} onClick={handleShowTranslation} buttonText="Добавить слово"></Button>)}
+                    </motion.div>
+                </>
+            )}
         </div>
+
     );
 }
 

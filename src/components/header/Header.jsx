@@ -5,7 +5,7 @@ import styles from './header.module.css';
 function Header() {
     return (
         <header className={styles.header}>
-            <div>Let's go!</div>
+            <div>Учим английский вместе!</div>
         </header>
     );
 }
